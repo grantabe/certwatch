@@ -112,12 +112,10 @@ def check_host(host):
 
 def main():
     hosts = get_hosts(hosts_file)
-    print(hosts)
     for host in hosts:
         print(host)
         report = check_host(host)
         print(report)
 
-
-print(check_host('badssl.com'))
-print(get_hosts(hosts_file))
+if __name__ == "__main__":
+    main()
